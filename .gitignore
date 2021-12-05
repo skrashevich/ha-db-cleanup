@@ -1,0 +1,10 @@
+*.cfg
+core.*
+backup
+bin
+data
+include
+logs
+lib
+reset.sh
+__pycache__
