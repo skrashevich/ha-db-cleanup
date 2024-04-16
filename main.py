@@ -121,11 +121,11 @@ def GetEntities(entityFile):
     """
     f = open(entityFile)
     raw = json.load(f)
-    entities = raw["data"]["entities"]
+    entities = raw["data"].get("entities", "")
     for entity in entities:
         entity_list_raw.append(Entity(**entity))
         entity_original_names.add(entity["original_name"])
-        entity_device_ids.add(entity["device_id"])
+        entity_device_ids.add(entity.get("device_id", ""))
     f.close
 
     logger.debug("Entity file import complete.")
