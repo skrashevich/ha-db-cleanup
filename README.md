@@ -1,4 +1,4 @@
-# Homeassistant DB Cleanup
+# Homeassistant DB Cleanup and Recovery
 
 *WARNING*: Limited testing has been done so use at own risk!
 
