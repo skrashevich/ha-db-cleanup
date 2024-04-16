@@ -447,7 +447,8 @@ if __name__ == "__main__":
         (3) Devices: Search by Quantity
         (4) Entites: Show All
         (5) Clean Device by name
-        (6) Exit\r\n
+        (6) Repair devices DB
+        (7) Exit\r\n
         """
         print(menu_string)
         searchSelection = input("Selection: ")
@@ -470,6 +471,9 @@ if __name__ == "__main__":
             removalString = input("Enter name of device to Clean: ")
             CleanDevice(removalString)
         elif searchSelection == "6":
+            LoadData()
+            CleanDevice("None")
+        elif searchSelection == "7":
             sys.exit(0)
         else:
             logger.info("Invalid selection.\r\n")
